@@ -7,7 +7,7 @@ float minx = 0;
 float maxx = 6.29;
 float miny = 0;
 float maxy = 6.29; /*jaki przedzial x, y*/
-float funkcja(float x1, float y1){ /*bedziemy rysowac warstwice tej funkcji*/
+float funkcja(float x1, float y1){ /*bedziemy rysowac warstwice tej funkcji, przeskalowanie współrzędnych*/
 	float x = x1;
 	float y = y1;
 	if(maxy - miny > maxx - minx){
@@ -21,7 +21,7 @@ float funkcja(float x1, float y1){ /*bedziemy rysowac warstwice tej funkcji*/
 	return sin(x)*sin(y); /*jakafunkcja*/
 }
 
-float minimum(void){  /*przedzal x: [0, 400]*/
+float minimum(void){  /*przedzal x: [0, 400], znajdowanie minimum funkcji*/
 	float mini = 10000;
 	int x;
 	for(x=0; x<400; x++){
@@ -36,7 +36,7 @@ float minimum(void){  /*przedzal x: [0, 400]*/
 	return mini;
 }
 float mini = minimum();
-float maximum(void){ /*przedzal x: [0, 400]*/
+float maximum(void){ /*przedzal x: [0, 400], znajdowanie maksimum funkcji*/
 	float maxi = -10000;
 	int x;
 	for(x=0; x<400; x++){
